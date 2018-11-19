@@ -1,4 +1,6 @@
-# AppAngular7
+# Angular 7 Course
+
+This is a repository for Angular 7 course.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
