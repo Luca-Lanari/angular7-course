@@ -8,6 +8,7 @@ import { Component, Output } from '@angular/core';
 export class AppComponent {
   oddNumbers: number[] = [];
   evenNumbers: number[] = [];
+  multipleNumbers: number[] = [];
 
   onIntervalFired(eventLastNumber: number) {
     if (eventLastNumber % 2 === 0) {
@@ -17,5 +18,8 @@ export class AppComponent {
     }
   }
 
+  onMultipleFired(eventLastNumber: number) {
+    this.multipleNumbers.push(eventLastNumber * 2);
+  }
 }
 

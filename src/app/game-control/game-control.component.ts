@@ -7,8 +7,11 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class GameControlComponent implements OnInit {
   @Output() intervalFired = new EventEmitter<number>();
+  @Output() multipleFired = new EventEmitter<number>();
   interval;
+  multipleInteval;
   lastNumber = 0;
+  lastNumberMultiple = 0;
 
   constructor() { }
 
@@ -24,4 +27,16 @@ export class GameControlComponent implements OnInit {
   onPauseGame() {
     clearInterval(this.interval);
   }
+
+  onStart2xGame() {
+    this.multipleInteval = setInterval(() => {
+      this.multipleFired.emit(this.lastNumberMultiple + 1);
+      this.lastNumberMultiple++;
+    }, 1000);
+  }
+
+  onPause2xGame() {
+    clearInterval(this.multipleInteval);
+  }
+
 }

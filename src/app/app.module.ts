@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { GameControlComponent } from './game-control/game-control.component';
 import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
+import { MultipleComponent } from './multiple/multiple.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { EvenComponent } from './even/even.component';
     GameControlComponent,
     OddComponent,
     EvenComponent,
+    MultipleComponent,
   ],
   imports: [
     BrowserModule,
